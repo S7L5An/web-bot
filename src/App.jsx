@@ -59,15 +59,15 @@ const App = () => {
     telegram.MainButton.show()
   }
 
-  const onSenData = useCallback(() => {
+  const onSendData = useCallback(() => {
     telegram.onSenData(JSON.stringify(cartItems))
   }, [cartItems])
 
   useEffect(() => {
-    telegram.onEven('mainButtonClicked', onSenData)
-    return () => telegram.offEvent('mainButtonClicked', onSenData)
-  }, [onSenData])
+    telegram.onEvent('mainButtonClicked', onSendData);
 
+    return () => telegram.offEvent('mainButtonClicked', onSendData);
+  }, [onSendData]);
 
 
   return (
