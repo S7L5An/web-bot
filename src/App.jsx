@@ -60,7 +60,7 @@ const App = () => {
   }
 
   const onSendData = useCallback(() => {
-    telegram.onSenData(JSON.stringify(cartItems))
+    telegram.sendData(JSON.stringify(cartItems))
   }, [cartItems])
 
   useEffect(() => {
