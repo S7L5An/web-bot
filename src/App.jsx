@@ -55,6 +55,7 @@ const App = () => {
   }
 
   const onCheckout = () => {
+    
     telegram.MainButton.text = 'Sotib olish'
     telegram.MainButton.show()
   }
@@ -64,7 +65,7 @@ const App = () => {
 
     if (queryID) {
       fetch(
-        'https://telegramwebapibot-b671371abfbb.herokuapp.com/web-data',
+        'https://web-bot-bay.vercel.app/',
         {
           method: 'POST',
           headers: {
